@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body id="body">
+  <section> 
+        <h2>Tabela IMC</h2>
+        <h1>Nome:</h1>
+        <input type="text" id='nome'>
+        <h1>Altura:</h1>
+      <input type="number" id='altura'>
+      <h1>Peso:</h1>
+    <input type="number" id='peso'>
+<button id="calcular">Registrar</button>
+</section>
+      <div >
+      <table id="tabela" border="1px">
+        <thead>
+        <tr>
+        <td>*</td>
+        <td>Nome</td>
+        <td>Peso</td>
+        <td>Altura</td>
+        <td>IMC</td>
+      </tr>
+    </thead>
+      </table>
+    </div>
+<script>
+let contagem=0
+  document.querySelector('#calcular').onclick=function imc(){
+      contagem++
+      let nome= document.querySelector('#nome').value
+      let altura= document.querySelector('#altura').value
+      let peso= document.querySelector('#peso').value
+      let body=document.querySelector("#body")
+      let tab=document.querySelector("#tabela")
+      let linha=document.createElement("tr")
+      let numero=document.createElement("td")
+      let nome1=document.createElement("td")
+      let peso1=document.createElement("td")
+      let altura1=document.createElement("td")
+      let result=document.createElement("td")
+      let calcimc
+      tab.appendChild(linha)
+      linha.appendChild(numero)
+      linha.appendChild(nome1)
+      linha.appendChild(peso1)
+      linha.appendChild(altura1)
+      linha.appendChild(result)
+      numero.append(contagem)
+      nome1.append(nome)
+      peso1.append(peso)
+      altura1.append(altura)
+      let resultadodoimc
+      resultadodoimc=(peso/( altura*altura ))
+      if(resultadodoimc< 18.5){
+          calcimc=document.createTextNode("Abaixo do peso")
+      }else if(resultadodoimc <25){
+        calcimc=document.createTextNode("Está no peso ideal")
+      }else if(resultadodoimc <30){
+        calcimct=document.createTextNode("um pouco fora do peso ideal")
+      }else if(resultadodoimc <40){
+        calcimc=document.createTextNode("Obesidade de primeiro grau")
+      }else if(resultadodoimc >40){
+        calcimc=document.createTextNode("Obesidade de segundo grau")
+      }
+      result.append(calcimc)
+  }
+  </script>
+</body> 
+</html>

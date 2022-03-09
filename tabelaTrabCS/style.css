@@ -1,0 +1,34 @@
+*{
+    margin: 2%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+h1{
+    font-size: 20px;
+
+}
+h2{
+    font-size: 60px;
+}
+#calcular{
+    color: white;
+    background-color: brown;
+}
+div{
+    font-size:15px;
+    margin-left: 455px;
+}
+body{
+    background-color: rgba(25, 9, 39, 0.787);
+    text-align: center;
+}
+section{
+    text-align: center;
+    background-color: rgb(89, 173, 221);
+    padding:15px;
+    width:550px ;
+    margin: auto;
+}
+table{
+    color: black;
+    background-color: white; 
+}
